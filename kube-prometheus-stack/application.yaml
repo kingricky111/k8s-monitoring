@@ -6,13 +6,16 @@ metadata:
 spec:
   project: default
   sources:
-    repoURL: https://prometheus-community.github.io/helm-charts
-    chart: kube-prometheus-stack
-    targetRevision: "*"
-    helm:
-      releaseName: kube-prometheus-stack
-      valueFiles:
-        - $values/values.yaml
+    - repoURL: https://prometheus-community.github.io/helm-charts
+      chart: kube-prometheus-stack
+      targetRevision: "*"
+      helm:
+        releaseName: kube-prometheus-stack
+        valueFiles:
+          - $values/kube-prometheus-stack/values.yaml
+    - repoURL: https://github.com/kingricky111/k8s-monitoring.git
+      targetRevision: HEAD
+      ref: values
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
