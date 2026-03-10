@@ -2,4 +2,4 @@
 .vscode/
 .idea/
 *.swp
-*.swo
+*.swo.DS_Store
