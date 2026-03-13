@@ -7,6 +7,10 @@ metadata:
     nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
 spec:
   ingressClassName: nginx
+  tls:
+  - hosts:
+      - argocd.homelab
+    secretName: argocd-homelab-tls
   rules:
     - host: argocd.homelab
       http:
