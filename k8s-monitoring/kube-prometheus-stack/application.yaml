@@ -12,7 +12,7 @@ spec:
       helm:
         releaseName: kube-prometheus-stack
         valueFiles:
-          - $values/k8s-platform/k8s-monitoring/kube-prometheus-stack/values.yaml
+          - $values/k8s-monitoring/kube-prometheus-stack/values.yaml
     - repoURL: https://github.com/kingricky111/k8s-platform.git
       targetRevision: HEAD
       ref: values
