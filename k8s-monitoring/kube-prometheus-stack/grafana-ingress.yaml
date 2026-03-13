@@ -5,6 +5,10 @@ metadata:
   namespace: monitoring
 spec:
   ingressClassName: nginx
+  tls:
+  - hosts:
+      - grafana.homelab
+    secretName: grafana-homelab-tls
   rules:
     - host: grafana.homelab
       http:
