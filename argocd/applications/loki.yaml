@@ -11,7 +11,7 @@ spec:
       targetRevision: "*"
       helm:
         valueFiles:
-          - $values/logging/loki/values.yaml
+          - $values/platform/logging/loki/values.yaml
 
     - repoURL: https://github.com/kingricky111/k8s-platform.git
       targetRevision: main
