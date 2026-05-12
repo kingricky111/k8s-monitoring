@@ -15,51 +15,52 @@ rules:
       - '*'
     verbs:
       - '*'
----
-- apiGroups: 
-  - ""
-  resources:
-  - 'pods'
-  - 'services'
-  - 'namespaces'
-  - 'events'
-  - 'nodes'
-  verbs:
-  - 'get'
-  - 'list'
-  - 'watch'
----
-apiGroups:
-- 'apps'
-resources:
-- 'deployments'
-- 'statefulsets'
-- 'daemonsets'
-- 'replicasets'
-verbs:
-- 'get'
-- 'list'
-- 'watch'
----
-apiGroups:
-- 'batch'
-resources:
-- 'jobs'
-- 'cronjobs'
-verbs:
-- 'get'
-- 'list'
-- 'watch'
----
-apiGroups:
-- 'metrics.k8s.io'
-resources:
-- 'pods'
-- 'nodes'
-verbs:
-- 'get'
-- 'list'
-- 'watch'
+
+  - apiGroups: 
+      - " "   
+    resources:
+      - 'pods'
+      - 'services'
+      - 'namespaces'
+      - 'events'
+      - 'nodes'
+    verbs:
+      - 'get'
+      - 'list'
+      - 'watch'
+
+  - apiGroups:
+      - 'apps'
+    resources:
+      - 'deployments'
+      - 'statefulsets'
+      - 'daemonsets'
+      - 'replicasets'
+    verbs:
+      - 'get'
+      - 'list'
+      - 'watch'
+
+  - apiGroups:
+      - 'batch'
+    resources:
+      - 'jobs'
+      - 'cronjobs'  
+      - 'jobs'
+      - 'cronjobs'
+    verbs:
+      - 'get'
+      - 'list'
+      - 'watch'
+  - apiGroups:
+      - 'metrics.k8s.io'
+    resources:
+      - 'pods'
+      - 'nodes'
+    verbs:
+      - 'get'
+      - 'list'
+      - 'watch'
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
