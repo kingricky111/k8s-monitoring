@@ -16,12 +16,12 @@ dashboard:
       - secretName: chaos-mesh-tls
         hosts:
           - chaos.homelab
+ 
+chaosDaemon:
+  runtime: containerd
+  socketPath: /run/containerd/containerd.sock
 
-  chaosDaemon:
-    runtime: containerd
-    socketPath: /run/containerd/containerd.sock
-
-  controllerManager:
+controllerManager:
   replicaCount: 1
   leaderElection:
     enabled: false
