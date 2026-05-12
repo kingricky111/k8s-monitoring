@@ -22,4 +22,6 @@ dashboard:
     socketPath: /run/containerd/containerd.sock
 
   controllerManager:
-    replicaCount: 1
+  replicaCount: 1
+  leaderElection:
+    enabled: false
