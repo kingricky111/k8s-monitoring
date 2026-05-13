@@ -25,3 +25,10 @@ controllerManager:
   replicaCount: 1
   leaderElection:
     enabled: false
+
+persistentVolume:
+  enabled: false
+  size: 8Gi
+  storageClassName: local-path
+  mountPath: /data
+
